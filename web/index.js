@@ -6,15 +6,15 @@ var enemyImage;
 var backgroundImage;
 
 function preload() {
-  playerImage = loadImage("/rocket.png");
-  enemyImage = loadImage("/asteroid.png");
+  playerImage = loadImage("rocket.png");
+  enemyImage = loadImage("asteroid.png");
   backgroundImage = loadImage("https://i.imgur.com/aKQOg3G.png");
 }
 
 function setup() {
   textSize(90);
   isGameOver = false;
-  createCanvas(windowWidth / 2, windowHeight);
+  createCanvas(windowWidth / 2, windowHeight- 120);
   player = createSprite(width / 2, height - (playerImage.height), 0, 0);
   player.addImage(playerImage);
   enemy = createSprite(width / 2, 0, 0, 0);
@@ -52,7 +52,7 @@ function draw() {
 }
 
 function gameOver() {
-  background(0);
+  background('#2B425D');
   textAlign(CENTER);
   fill("white");
   textSize(40);
